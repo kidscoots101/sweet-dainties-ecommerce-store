@@ -90,7 +90,10 @@ const Cart = () => {
             {cartItems.map((item) => (
               <div className="cart-item" key={item.id}>
                 <div className="cart-item-image">
-                  <img src={item.image} alt={item.name} />
+                  <img
+                    src={require(`../assets/${item.name}.png`)}
+                    alt={item.name}
+                  />
                 </div>
                 <div className="cart-item-details">
                   <h4 className="item-name">{item.name}</h4>
@@ -154,7 +157,20 @@ const Cart = () => {
         className="footer"
         style={{ textAlign: "center", fontWeight: "600" }}
       >
-        &copy; 2023 Sweet Dainties Confectionery
+        &copy; 2024 Sweet Dainties Confectionery
+        <br />
+        <div style={{ marginTop: 10 }} />
+        <text>Powered by </text>
+        <text style={{ color: "#35bc80" }}>Supabase </text>
+        <img
+          src={require("../assets/supabase-logo-icon.png")}
+          style={{
+            height: 15,
+            width: 15,
+            // alignSelf: "center",
+            verticalAlign: "middle",
+          }}
+        />
         <br />
         <div style={{ marginTop: "10px" }}>
           <a
